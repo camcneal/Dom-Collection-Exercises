@@ -17,7 +17,7 @@ var nearMark = markets.filter(function(market, i, arr) {
 // console.log(nearMark);
 // go through array and append the markets that apply to the page
 nearMark.forEach(function(market, i) {
-    var li = $('<li>' + nearMark[i] + '</li>');
+    var li = $('<li>' + market + '</li>');
     $('.marketList').append(li);
 })
 
@@ -25,10 +25,10 @@ nearMark.forEach(function(market, i) {
 var catPic = catGif.data.map(function(cat, i) {
     // console.log(catGif.data[i].images.downsized.url);
 
-    return catGif.data[i].images.downsized.url;
+    return cat.images.downsized.url;
 });
 
 catPic.forEach(function(cat, i) {
-    var img = $('<img src=' + catPic[i] + '>');
+    var img = $('<img src=' + cat + '>');
     $('.catList').append(img);
 })
